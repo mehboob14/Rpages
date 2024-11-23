@@ -1,0 +1,32 @@
+﻿@page "{id:int}"
+@model EditModel
+@{
+    ViewData["Title"] = "Edit Client";
+}
+
+<h2>Edit Client</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Client.Id" />
+    <div class="form-group">
+        <label asp-for="Client.Name"></label>
+        <input asp-for="Client.Name" class="form-control" />
+        <span asp-validation-for="Client.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Email"></label>
+        <input asp-for="Client.Email" class="form-control" />
+        <span asp-validation-for="Client.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Address"></label>
+        <input asp-for="Client.Address" class="form-control" />
+        <span asp-validation-for="Client.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.PhoneNumber"></label>
+        <input asp-for="Client.PhoneNumber" class="form-control" />
+        <span asp-validation-for="Client.PhoneNumber" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
